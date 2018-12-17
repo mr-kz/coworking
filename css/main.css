@@ -46,6 +46,11 @@
   font-style: normal;
 }
 
+html {
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+}
+
 body {
   margin: 0;
   font-family: 'GothamPro', "Arial Narrow", sans-serif;
@@ -90,6 +95,11 @@ p {
   margin: 0;
 
 }
+
+figure {
+  margin: 0;
+}
+
 h1,
 h2,
 h3,
@@ -121,6 +131,10 @@ address {
   flex-direction: column;
 }
 
+.wrapper__content {
+  flex: 1;
+}
+
 .container {
   max-width: 1100px;
   padding: 0 20px;
@@ -133,7 +147,7 @@ address {
   display: flex;
 }
 .main-container {
-  margin: 45px 0 50px;
+  margin: 65px 0 50px;
   background: #fff;
   -webkit-box-flex: 1;
   flex: 1;
@@ -194,7 +208,6 @@ address {
 
 .about {
   background: #27273e;
-  margin-bottom: 20px;
 }
 
 .about__img {
@@ -264,6 +277,37 @@ address {
   flex: 1;
 }
 
+.breadcrumbs {
+  font-style: italic;
+  opacity: 0.8;
+  font-size: 14px;
+  margin: -2px 0 18px;
+}
+
+.breadcrumbs__list {
+  display: -webkit-box;
+  display: flex;
+}
+
+.breadcrumbs__item::after {
+  content: "/";
+  margin-right: 3px;
+}
+
+.breadcrumbs__item:last-child::after {
+  display: none;
+}
+
+.breadcrumbs__item-active .breadcrumbs__link {
+  text-decoration: none;
+  color: #221f1f;
+}
+
+.breadcrumbs__link {
+  text-decoration: underline;
+  color: #ec1e79;
+}
+
 .border {
   margin-bottom: 22px;
   border-bottom: 2px solid #f5f5f5;
@@ -290,7 +334,7 @@ address {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  flex-direction: column;
+  flex-direction: row;
   -webkit-box-flex: 0;
   flex: 0 1 250px;
   margin-right: 20px;
@@ -387,6 +431,221 @@ address {
   line-height: 30px;
 }
 
+.reviews {
+  margin-bottom: 45px;
+}
+
+.reviews__title {
+  margin-bottom: 36px;
+  color: #221f1f;
+  font-size: 49px;
+  font-weight: bold;
+}
+
+.reviews__wrap {
+  display: -webkit-box;
+  display: flex;
+  margin-bottom: 24px;
+}
+
+.reviews__img {
+  -webkit-box-flex: 0;
+  flex: 0 1 160px;
+  width: 160px;
+  height: 160px;
+  background: url('../img/reviews/elena.jpg') no-repeat;
+  border-radius: 50%;
+  margin-top: 5px;
+}
+
+.reviews__img img {
+  border-radius: 50%;
+}
+
+.reviews__content {
+  -webkit-box-flex: 1;
+  flex: 1;
+  margin-left: 20px;
+  line-height: 21px;
+  font-weight: 300;
+}
+
+.reviews__content-date {
+  color: #656464;
+  font-size: 14px;
+  margin-bottom: 3px;
+}
+
+.reviews__content-title {
+  font-size: 18px;
+  margin-bottom: 9px;
+  font-weight: bold;
+}
+
+.reviews__content-text {
+  font-size: 18px;
+  line-height: 30px;
+}
+
+.prices {
+  margin-bottom: 29px;
+}
+
+.prices__title {
+  margin-bottom: 41px;
+  color: #221f1f;
+  font-size: 49px;
+  font-weight: bold;
+}
+
+.prices__list {
+  display: -webkit-box;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -32px;
+}
+
+.prices__item {
+  -webkit-box-flex: 0;
+  flex: 0 1 253px;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+  padding: 0 18px 42px 33px;
+  -webkit-box-align: center;
+  align-items: center;
+}
+
+.prices__item-figure {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+  position: relative;
+  margin-bottom: 23px;
+  border-radius: 3px;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.prices__item-figure::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #27273e;
+  opacity: .85;
+  border-radius: 5px;
+  -webkit-transition: .7s;
+  transition: .7s;
+}
+
+.prices__item-figure:hover .prices__item-figcaption {
+  opacity: 0;
+}
+
+.prices__item-figure:hover:before {
+  opacity: 0;
+}
+
+.prices__item-img {
+  border-radius: 3px;
+  max-width: unset;
+}
+
+.prices__item-figcaption {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  justify-content: center;
+  color: #5dd1f8;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 34px;
+  text-transform: uppercase;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.prices__item-figcaption-vip {
+  color: #ec1e79;
+}
+
+.prices__item-price {
+  font-size: 18px;
+  font-weight: bold;
+  max-width: 250px;
+  margin-bottom: 10px;
+}
+
+.prices__item-text {
+  line-height: 21px;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.prices__item-figcaption,
+.prices__item-price,
+.prices__item-text {
+  text-align: center;
+}
+
+.partners {
+  margin: 0 0 -8px 5px;
+}
+
+.partners__title {
+  margin-bottom: 49px;
+  color: #221f1f;
+  font-size: 49px;
+  line-height: 37px;
+  font-weight: bold;
+}
+
+.partners__list {
+  display: -webkit-box;
+  display: flex;
+  flex-wrap: wrap;
+  -webkit-box-align: center;
+  align-items: center;
+  margin-left: -60px;
+}
+
+.partners__item {
+  -webkit-box-flex: 0;
+  flex: 0 1 156px;
+  padding: 0 54px 48px 60px;
+  text-align: center;
+}
+
+.partners__item-img {
+  -webkit-filter: grayscale(1);
+  filter: grayscale(1);
+  cursor: pointer;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.partners__item-img:hover {
+  -webkit-filter: grayscale(0);
+  filter: grayscale(0);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
 .pagination {
   margin-bottom: 20px;
 }
@@ -443,13 +702,45 @@ address {
   padding: 5px 9px;
   background: #27273e;
   border-radius: 3px;
-  color: #fff;
+  color: #ec1e79;
 }
 
 .pagination__link {
   color: #221f1f;
   font-size: 14px;
   font-weight: bold;
+}
+
+.cta {
+  background: #27273e;
+  margin: 43px 0 55px;
+}
+
+.cta__wrap {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  background: url('../img/reviews/sale.png') no-repeat;
+  margin-left: 13px;
+}
+
+.cta__text {
+  -webkit-box-flex: 0;
+  flex: 0 1 625px;
+  height: 174px;
+  padding: 40px 0 49px;
+  box-sizing: border-box;
+  font-weight: 300;
+  color: #fff;
+  font-size: 18px;
+  line-height: 30px;
+  margin-left: -21px;
+}
+
+.cta__sale {
+  font-weight: bold;
+  color: #ec1e79;
 }
 
 .footer {
@@ -572,7 +863,6 @@ address {
 
 .about {
   background: #27273e;
-  margin-bottom: 20px;
 }
 
 .about__img {
@@ -693,3 +983,5 @@ address {
   font-size: 18px;
   line-height: 30px;
 }
+
+

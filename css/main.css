@@ -52,7 +52,6 @@ html {
 }
 
 body {
-  margin: 0;
   font-family: 'GothamPro', "Arial Narrow", sans-serif;
   font-weight: normal;
   background: #fff;
@@ -61,17 +60,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-h1 {
-  font-size: 2em;
-  margin: 0.67em 0;
-}
-
-a {
-  background-color: transparent;
-}
-
 img {
-  border-style: none;
   max-width: 100%;
   height: auto;
 }
@@ -741,6 +730,215 @@ address {
 .cta__sale {
   font-weight: bold;
   color: #ec1e79;
+}
+
+.form__wrap {
+  max-width: 700px;
+  margin: 0 auto;
+  background: #f5f5f5;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+  padding: 51px 70px 38px;
+  box-sizing: border-box;
+  font-weight: 300;
+  color: #221f1f;
+  font-size: 14px;
+}
+.form__title {
+  color: #221f1f;
+  font-size: 49px;
+  font-weight: 700;
+  line-height: 38px;
+  margin-bottom: 20px;
+}
+
+.form__row {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  margin-bottom: 11px;
+}
+
+.form__row:nth-child(2) {
+  margin-bottom: 9px;
+}
+
+.form__row-full {
+  -webkit-box-flex: 1;
+  flex: 1;
+}
+
+.form__row-half {
+  -webkit-box-flex: 0;
+  flex: 0 1 269px;
+}
+
+.form__label {
+  line-height: 30px;
+}
+
+.form__name,
+.form__social {
+  width: 100%;
+  padding: 14px 10px;
+  border-radius: 2px;
+  border: none;
+  box-sizing: border-box;
+  font-weight: 300;
+  background: #fff;
+}
+
+.form__name:focus,
+.form__social:focus {
+  outline: 1px solid #ec1e79;
+}
+
+.form__name::-webkit-input-placeholder,
+.form__social::-webkit-input-placeholder {
+  opacity: 0.5;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.form__name::-moz-placeholder,
+.form__social::-moz-placeholder {
+  opacity: 0.5;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.form__name:-ms-input-placeholder,
+.form__social:-ms-input-placeholder {
+  opacity: 0.5;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.form__name::-ms-input-placeholder,
+.form__social::-ms-input-placeholder {
+  opacity: 0.5;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.form__name::placeholder,
+.form__social::placeholder {
+  opacity: 0.5;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.form__textarea {
+  width: 100%;
+  color: #221f1f;
+  font-size: 14px;
+  font-weight: 300;
+  border: 1px solid #ec1e79;
+  padding: 10px;
+  box-sizing: border-box;
+  height: 90px;
+  border-radius: 2px;
+  resize: none;
+}
+
+.form__textarea:active,
+.form__textarea:focus {
+  outline: none;
+}
+
+.form__button {
+  background: #27273e;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2.4px;
+  border: none;
+  outline: none;
+  padding: 16px 20px;
+  border-radius: 2px;
+  margin-top: 9px;
+  cursor: pointer;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.form__button:hover {
+  background: #ec1e79;
+}
+
+.form__button:active,
+.form__button:focus {
+  outline: none;
+}
+
+.form__radio {
+  display: none;
+}
+
+.form__radio-wrap {
+  display: -webkit-box;
+  display: flex;
+}
+
+.form__radio-answer {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  margin-right: 15px;
+}
+
+.form__radio-title {
+	font-size: 14px;
+	color: #302d2d;
+	margin-left: 5px;
+	margin-right: 12px;
+	margin-bottom: 3px;
+	display: inline-block;
+	cursor: pointer;
+	padding-left: 22px;
+  position: relative;
+  margin-top: 5px;
+}
+
+.form__radio-title:before {
+	border: 1px solid #cfcfcf;
+	border-radius: 50%;
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	top: -4.5px;
+	left: -4.5px;
+	content: '';
+}
+
+.form__radio-title:after {
+	background-color: #ec1e79;
+	border-radius: 50%;
+	width: 8px;
+	height: 8px;
+	top: 3.4px;
+	left: 2.5px;
+	content: '';
+	position: absolute;
+	display: none;
+}
+
+input[type="radio"]:checked + .form__radio-title:after {
+	display: block;
+}
+
+input[type="radio"]:checked + .form__radio-title:before {
+	border: 1px solid #ec1e79;
+}
+
+input[type="radio"]:checked + .form__radio-title {
+    color: #ec1e79;
 }
 
 .footer {

@@ -21,10 +21,18 @@
                                 <img src="img/header/logo.png" alt="Логотип Воркадиум">
                             </a>
                         </div>
-                        <address class="header__contact">
-                            <a class="header__tel" href="tel:88000039210">8 (800) 00-392-10</a>
-                            <button type="button" class="schedule">График работы </button>
-                        </address>
+                        <adress class="contacts">
+                            <a href="tel:88000039210" class="contacts__phone">8 (800) 00-392-10</a>
+                            <div class="schedule">
+                                <button class="schedule__button">График работы</button>
+                                <div class="schedule__wrapper">
+                                    <div class="schedule__dropdown">
+                                        <div class="schedule__workdays">пн-вс: 09:00-20:00</div>
+                                        <div class="schedule__break">обед: 14:00-14:30</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </adress>
                     </div>
                 </div>
             </header>
@@ -195,7 +203,7 @@
                     </div>
                 </div>
                 <div class="cta">
-                    <div class="container">
+                    <div class="cta__area">
                         <div class="cta__wrap">
                             <p class="cta__text">Для наших новых клиентов мы предлагаем
                                 <span class="cta__sale">скидку 50%</span> на первый день! Приходите, чтобы лично
@@ -204,52 +212,54 @@
                         </div>
                     </div>
                 </div>
-                <div class="form">
-                    <div class="form__wrap">
-                        <h2 class="form__title">
-                            Оставить отзыв
-                        </h2>
-                        <form action="" class="form__reviews">
-                            <div class="form__row">
-                                <div class="form__row-half">
-                                    <label for="form__name-id" class="form__label">Ваше имя</label>
-                                    <input type="text" id="form__name-id" class="form__name" name="name" placeholder="Андрей">
-                                </div>
-                                <div class="form__row-half">
-                                    <label for="form__social-id" class="form__label">Ссылка на профиль VK</label>
-                                    <input type="text" id="form__social-id" class="form__social" name="social"
-                                        placeholder="vk.com/example">
-                                </div>
-                            </div>
-                            <div class="form__row">
-                                <div class="form__row-full">
-                                    <label for="form__textarea-id" class="form__label">Текст отзыва</label>
-                                    <textarea id="form__textarea-id" class="form__textarea" name="reviews">Мне понравилось</textarea>
-                                </div>
-                            </div>
-                            <div class="form__row">
-                                <div class="form__row-send">
-                                    <div class="form__row-send-title">
-                                        <label class="form__label">Отображать фото в отзыве?</label>
-                                    </div>
-                                    <div class="form__radio-wrap">
-                                        <div class="form__radio-answer">
-                                            <input type="radio" id="yes" name="answer" class="form__radio" checked>
-                                            <label for="yes" class="form__radio-title">Да</label>
-                                            <input type="radio" id="no" name="answer" class="form__radio">
-                                            <label for="no" class="form__radio-title">Нет</label>  
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="form__row-send">
-                                    <input type="submit" class="form__button" value="Отправить">
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
             </div>
         </div>
+        <div class="form">
+            <div class="form__wrap">
+                <h2 class="form__title">
+                    Оставить отзыв
+                </h2>
+                <form action="" class="form__reviews">
+                    <div class="form__row">
+                        <div class="form__row-half">
+                            <label for="form__name-id" class="form__label">Ваше имя</label>
+                            <input type="text" id="form__name-id" class="form__name" name="name" placeholder="Андрей">
+                        </div>
+                        <div class="form__row-half">
+                            <label for="form__social-id" class="form__label">Ссылка на профиль VK</label>
+                            <input type="text" id="form__social-id" class="form__social" name="social"
+                                placeholder="vk.com/example">
+                        </div>
+                    </div>
+                    <div class="form__row">
+                        <div class="form__row-full">
+                            <label for="form__textarea-id" class="form__label">Текст отзыва</label>
+                            <textarea id="form__textarea-id" class="form__name" name="name" placeholder="Мне понравилось"></textarea>
+                        </div>
+                    </div>
+                    <div class="form__row">
+                        <div class="form__row-send">
+                            <div class="form__row-send-title">
+                                <label class="form__label">Отображать фото в отзыве?</label>
+                            </div>
+                            <div class="form__radio-wrap">
+                                <div class="form__radio-answer">
+                                    <input type="radio" id="yes" name="answer" class="form__radio" checked>
+                                    <label for="yes" class="form__radio-title">Да</label>
+                                    <input type="radio" id="no" name="answer" class="form__radio">
+                                    <label for="no" class="form__radio-title">Нет</label>  
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form__row-send">
+                            <input type="submit" class="form__button" value="Отправить">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
         <footer class="footer">
             <div class="container">
                 <div class="footer__wrap">
